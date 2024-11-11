@@ -30,11 +30,8 @@ from pgaiembeddings import PgAIEmbeddings
 
 # Open-Ai Key configuration
 vectostore_config = get_vectorstore_config()
-open_ai_api_key = get_open_ai_api_key().OPENAI_API_KEY
-
-
-#PG-Vector Store Connection
-connection = vectostore_config.DB_CONNECTION_STRING
+open_ai_api_key = st.secrets["open_ai_api_key"]
+connection = st.secrets["database_url"]
 
 
 # Prompt Template
